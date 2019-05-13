@@ -42,10 +42,19 @@
 
             .content {
                 text-align: center;
+                top: 200px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: white;
             }
 
             .title {
-                font-size: 84px;
+                font-size: 8vw;
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                color: white;
             }
 
             .links > a {
@@ -91,6 +100,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+                <div class="title">
+                    w.spring
+                </div>
         </div>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -107,14 +119,7 @@
                 </div>
             @endif
             
-            <div class="content">
-                <div class="title">
-                    w.spring
-                </div>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                </div>
-            </div>
+            
         </div>
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -125,5 +130,8 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         
+        
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
     </body>
 </html>

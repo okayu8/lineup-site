@@ -60,6 +60,7 @@ html, body {
 
 .navbar--extend{
     background-color: rgba(128,128,128,0)!important;
+    left: initial;
 }
 
 .nav-item--extend{

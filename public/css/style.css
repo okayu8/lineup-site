@@ -59,10 +59,42 @@ html, body {
 }
 
 .navbar--extend{
-    background-color: rgba(128,128,128,0)!important;
+    
     left: initial;
+}
+
+.navbar-color{
+    background-color: rgba(128,128,128,0);
 }
 
 .nav-item--extend{
     color: #FFFFFF;
+    font-size: 3vw;
 }
+
+.content-1{
+    position: relative;
+    text-align: center;
+    margin-top: 80px;
+    
+    
+}
+
+.panel-1{
+    margin: 10%;
+    margin-top: 80px;
+}
+
+.product-title-1{
+    font-size: 24px;
+    color: #ff8e0d;
+}
+
+.product-img-1{
+    width: 100%;
+}
+
+.product-link:hover{
+    text-decoration:none;
+}
+

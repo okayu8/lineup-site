@@ -19,10 +19,16 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-        <ul class="navbar navbar-expand-sm fixed-top navbar--extend navbar-right">
-            <li class="nav-item nav-link nav-item--extend active">Line up</a>
-            <li class="nav-item nav-link nav-item--extend" >Profile</a>
+        <nav>
+            <ul class="navbar navbar-expand-sm fixed-top navbar--extend navbar-right">
+                <li class="nav-item nav-link active">
+                    <a class="nav-item--extend" href="#">Line up</a>
+                </li>
+                <li class="nav-item nav-link" >
+                    <a class="nav-item--extend" href="#">Profile</a>
+                </li>
             </ul>
+        </nav>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

@@ -7,6 +7,12 @@ html, body {
     margin: 0;
 }
 
+a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
 .full-height {
     height: 100vh;
 }
@@ -59,9 +65,59 @@ html, body {
 }
 
 .navbar--extend{
-    background-color: rgba(128,128,128,0)!important;
+    width: 280px;
+    left: initial;
+}
+
+.navbar-color{
+    background-color: rgba(128,128,128,0);
 }
 
 .nav-item--extend{
-    color: #FFFFFF;
+    width:50%;
+    text-align: center;
 }
+
+.nav-link--extend{
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-link--extend{
+        color: #FFFFFF;
+        font-size: 14px;
+    }
+    .navbar--extend{
+        width:180px;
+        left: initial;
+        padding: 10px;
+    }
+}
+
+.content-1{
+    position: relative;
+    text-align: center;
+    margin-top: 80px;
+    
+    
+}
+
+.panel-1{
+    margin: 10%;
+    margin-top: 80px;
+}
+
+.product-title-1{
+    font-size: 24px;
+    color: #ff8e0d;
+}
+
+.product-img-1{
+    width: 100%;
+}
+
+.product-link:hover{
+    text-decoration:none;
+}
+

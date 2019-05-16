@@ -18,11 +18,11 @@
     </head>
     <body>
         <div class="navbar navbar-expand-sm fixed-top navbar--extend navbar-right navbar-color">
-            <div class="nav-item nav-link active">
-                <a class="nav-item--extend" href="#">Line up</a>
+            <div class="nav-item nav-link nav-item--extend active">
+                <a class="nav-link--extend" href="#">Line up</a>
             </div>
-            <div class="nav-item nav-link" >
-                <a class="nav-item--extend" href="#">Profile</a>
+            <div class="nav-item nav-item--extend nav-link" >
+                <a class="nav-link--extend" href="#">Profile</a>
             </div>
         </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

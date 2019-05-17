@@ -13,7 +13,6 @@ class Controller extends BaseController
 
     public function __construct()
     {
-
         //キャッシュが残るので 毎回 view ファイルを削除する
         $success = \File::cleanDirectory(storage_path()."/framework/views/");
 

@@ -19,7 +19,7 @@
     <body>
         <div class="navbar navbar-expand-sm fixed-top navbar--extend navbar-right navbar-color">
             <div class="nav-item nav-link nav-item--extend active">
-                <a class="nav-link--extend" href="#">Line up</a>
+                <a class="nav-link--extend" href="#lineup">Line up</a>
             </div>
             <div class="nav-item nav-item--extend nav-link" >
                 <a class="nav-link--extend" href="#">Profile</a>
@@ -55,28 +55,28 @@
                 </div>
         </div>
         
-        <div class="content-1">
+        <div id="lineup" class="content-1">
             <h1 style="font-weight:bold;">Line Up</h1>
             <div class="row panel-1">
-                <div class="col-md-6">
+                <div class="col-md-6 panel-item">
                     <a class="product-link" href="#">
                         <img class="product-img-1" src="/images/DSC00247.jpg"/>
                         <p class="product-title-1">test1</p>
                     </a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 panel-item">
                     <a class="product-link" href="#">
                         <img class="product-img-1" src="/images/DSC01300.jpg"/>
                         <p class="product-title-1">test2</p>
                     </a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 panel-item">
                     <a class="product-link" href="#">
                         <img class="product-img-1" src="/images/DSC01311.jpg"/>
                         <p class="product-title-1">test3</p>
                     </a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 panel-item">
                     <a class="product-link" href="#">
                         <img class="product-img-1" src="/images/DSC00247.jpg"/>
                         <p class="product-title-1">test4</p>

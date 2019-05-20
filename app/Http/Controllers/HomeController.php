@@ -11,6 +11,8 @@ class HomeController extends Controller
         //TODO: DBから取得
         $title = 'W.Spring';
         //TODO: DBから取得
+        $slide_img = array('/images/DSC00247.jpg', '/images/DSC01300.jpg', '/images/DSC01311.jpg');
+        //TODO: DBから取得
         $lineup_array = array(
             'test1' => array(
                 'img'=>'/images/DSC00247.jpg', 
@@ -29,6 +31,6 @@ class HomeController extends Controller
                 'title'=>'test4', 
                 'desc'=>'テスト2という商品です。'),
             );
-        return view('home', compact('title', 'lineup_array'));
+        return view('home', compact('title', 'slide_img', 'lineup_array'));
     }
 }

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>W.spring</title>
+        <title>{{$title}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -58,30 +58,15 @@
         <div id="lineup" class="content-1">
             <h1 style="font-weight:bold;">Line Up</h1>
             <div class="row panel-1">
-                <div class="col-md-6 panel-item">
-                    <a class="product-link" href="#">
-                        <img class="product-img-1" src="/images/DSC00247.jpg"/>
-                        <p class="product-title-1">test1</p>
-                    </a>
-                </div>
-                <div class="col-md-6 panel-item">
-                    <a class="product-link" href="#">
-                        <img class="product-img-1" src="/images/DSC01300.jpg"/>
-                        <p class="product-title-1">test2</p>
-                    </a>
-                </div>
-                <div class="col-md-6 panel-item">
-                    <a class="product-link" href="#">
-                        <img class="product-img-1" src="/images/DSC01311.jpg"/>
-                        <p class="product-title-1">test3</p>
-                    </a>
-                </div>
-                <div class="col-md-6 panel-item">
-                    <a class="product-link" href="#">
-                        <img class="product-img-1" src="/images/DSC00247.jpg"/>
-                        <p class="product-title-1">test4</p>
-                    </a>
-                </div>
+                    @foreach($lineup_array as $value)
+                        <div class="col-md-6 panel-item">
+                            <a class="product-link" href="#">
+                                <img class="product-img-1" src={{$value['img']}}/>
+                                <p class="product-title-1">{{$value['title']}}</p>
+                            </a>
+                        </div>
+                    @endforeach
+                
             </div>
         </div>
 

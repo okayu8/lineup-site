@@ -14,13 +14,15 @@ class Controller extends BaseController
     public function __construct()
     {
         //キャッシュが残るので 毎回 view ファイルを削除する
-        $success = \File::cleanDirectory(storage_path()."/framework/views/");
+        //$success = \File::cleanDirectory(storage_path()."/framework/views/");
 
-        if(\Request::ip() == "61.27.15.240"){
+        //TODO:何故このrequest::ipなのか調べる
+        if(\Request::ip() == "::1"){
 
             //デバッグモード
 
         } else {
+            error_log(\Request::ip());
             \Debugbar::disable();
         }
 

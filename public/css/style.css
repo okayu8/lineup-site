@@ -108,13 +108,17 @@ a:hover{
     margin-top: 80px;
 }
 
+.panel-item{
+    margin-bottom: 50px;
+}
+
 .product-title-1{
     font-size: 24px;
     color: #ff8e0d;
 }
 
 .product-img-1{
-    width: 100%;
+    width: 80%;
 }
 
 .product-link:hover{

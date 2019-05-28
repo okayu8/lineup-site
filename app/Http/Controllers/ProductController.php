@@ -38,7 +38,7 @@ class ProductController extends Controller
         $product->file_name = $request->file_name ? $request->file_name : "";
         $product->file_name2 = $request->file_name2 ? $request->file_name2 : "";
         $product->file_name3 = $request->file_name3 ? $request->file_name3 : "";
-        $product->price = $request->price ? $request->price : "";
+        $product->price = $request->price ? $request->price : null;
         $product->product_url = $request->product_url ? $request->product_url : "";
         $product->category_id = $request->category_id ? $request->category_id : null;
         $product->save();
@@ -57,7 +57,7 @@ class ProductController extends Controller
         $product->file_name = $request->file_name ? $request->file_name : "";
         $product->file_name2 = $request->file_name2 ? $request->file_name2 : "";
         $product->file_name3 = $request->file_name3 ? $request->file_name3 : "";
-        $product->price = $request->price ? $request->price : "";
+        $product->price = $request->price ? $request->price : null;
         $product->product_url = $request->product_url ? $request->product_url : "";
         $product->category_id = $request->category_id ? $request->category_id : null;
         $product->save();

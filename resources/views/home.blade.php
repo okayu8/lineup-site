@@ -1,3 +1,6 @@
+@php
+    $title = __('Line up');
+@endphp
 @extends('layouts.app')
 
 @section('content')
@@ -39,6 +42,7 @@
                             <a class="product-link" href="#">
                                 <img class="product-img-1" src={{$value['img']}}/>
                                 <p class="product-title-1">{{$value['title']}}</p>
+                                <p class="product-desc-1">{{$value['desc']}}</p>
                             </a>
                         </div>
                     @endforeach

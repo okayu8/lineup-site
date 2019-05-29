@@ -17,7 +17,7 @@ class HomeController extends Controller
             'test1' => array(
                 'img'=>'/images/DSC00247.jpg', 
                 'title'=>'test1', 
-                'desc'=>'テスト1という商品です。'),
+                'desc'=>'テスト1という商品です。',),
             'test2' => array(
                 'img'=>'/images/DSC01300.jpg', 
                 'title'=>'test2', 

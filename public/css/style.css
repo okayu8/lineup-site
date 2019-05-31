@@ -1,5 +1,5 @@
 html, body {
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(233, 233, 233);
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
@@ -110,12 +110,12 @@ a:hover{
 }
 
 .panel-item{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 .panel-content{
-    width: 90%;
+    width: 95%;
     display: inline-block;
     background-color: #ffffff;
     border-radius: 12px;

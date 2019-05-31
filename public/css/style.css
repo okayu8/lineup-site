@@ -98,7 +98,7 @@ a:hover{
 .content-1{
     position: relative;
     text-align: center;
-    margin-top: 80px;
+    padding-top: 80px;
     
     
 }
@@ -115,6 +115,13 @@ a:hover{
 .product-title-1{
     font-size: 24px;
     color: #ff8e0d;
+    margin-bottom: 0px;
+}
+
+.product-desc-1{
+    font-size: 18px;
+    color: #636b6f;
+    margin-bottom: 0px;
 }
 
 .product-img-1{

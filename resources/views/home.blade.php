@@ -39,11 +39,13 @@
             <div class="row panel-1">
                     @foreach($lineup_array as $value)
                         <div class="col-md-6 panel-item">
-                            <a class="product-link" href="#">
-                                <img class="product-img-1" src={{$value['img']}}/>
-                                <p class="product-title-1">{{$value['title']}}</p>
-                                <p class="product-desc-1">{{$value['desc']}}</p>
-                            </a>
+                            <div class="panel-content">
+                                <a class="product-link" href="#">
+                                    <img class="product-img-1" src={{$value['img']}}/>
+                                    <p class="product-title-1">{{$value['title']}}</p>
+                                    <p class="product-desc-1">{{$value['desc']}}</p>
+                                </a>
+                            </div>
                         </div>
                     @endforeach
                 

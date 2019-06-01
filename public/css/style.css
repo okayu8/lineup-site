@@ -145,3 +145,11 @@ a:hover{
     text-decoration:none;
 }
 
+.login{
+    margin: 20px;
+}
+
+.login-title{
+    text-align: center;
+}
+

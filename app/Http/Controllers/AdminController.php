@@ -13,6 +13,8 @@ class AdminController extends Controller
 
     public function login()
     {
+        $this->middleware('auth');
+        
         return view('admin/dashboard');
     }
     

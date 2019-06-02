@@ -18,9 +18,9 @@
     </head>
     <body>
         
-
-        @yield('content')
-        
+        <div class="admin-content">
+            @yield('content')
+        </div>
         
 
         <!-- jQuery library -->

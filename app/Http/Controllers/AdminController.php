@@ -11,11 +11,18 @@ class AdminController extends Controller
         return view('admin/login');
     }
 
-    public function login()
+    public function dashboard()
     {
         $this->middleware('auth');
-        
+
         return view('admin/dashboard');
+    }
+
+    public function registry()
+    {
+        // $this->middleware('auth');
+
+        return view('admin/registry');
     }
     
 }

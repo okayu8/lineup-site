@@ -145,11 +145,13 @@ a:hover{
     text-decoration:none;
 }
 
-.login{
+/* admin pages style */
+
+.admin-content{
     margin: 20px;
 }
 
-.login-title{
+.admin-title{
     text-align: center;
 }
 

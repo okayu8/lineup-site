@@ -16,3 +16,7 @@
 // });
 
 Route::get('/', 'HomeController@index');
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/registry', 'AdminController@registry');
+Route::get('/admin/dashboard', 'AdminController@dashboard');
+Auth::routes();

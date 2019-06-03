@@ -155,3 +155,10 @@ a:hover{
     text-align: center;
 }
 
+.dashboard-content{
+    margin: 40px;
+}
+
+.dashboard-item{
+    text-align: center;
+}

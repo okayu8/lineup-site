@@ -8,16 +8,16 @@
 <h1 class="admin-title">DashBoard</h1>
 <div class="row dashboard-content">
     <div class="col-md-3 dashboard-item">
-        Site Setting
+        <a href="/admin/site-settings">Site Setting</a>
     </div>
     <div class="col-md-3 dashboard-item">
-        Products
+        <a href="/admin/products">Products</a>
     </div>
     <div class="col-md-3 dashboard-item">
-        Profile
+        <a href="/admin/profile">Profile</a>
     </div>
     <div class="col-md-3 dashboard-item">
-        Footer
+        <a href="admin/footer">Footer</a>
     </div>
 </div>
 

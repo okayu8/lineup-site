@@ -15,8 +15,13 @@
 //     return view('home');
 // });
 
+Auth::routes();
 Route::get('/', 'HomeController@index');
+
+//admin
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/registry', 'AdminController@registry');
-Route::get('/admin/dashboard', 'AdminController@dashboard');
-Auth::routes();
+Route::get('/admin/site-settings', 'AdminController@siteSetting');
+Route::get('/admin/products', 'AdminController@products');
+Route::get('/admin/profile', 'AdminController@profile');
+Route::get('/admin/footer', 'AdminController@footer');

@@ -6,15 +6,16 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function index()
-    {
-        return view('admin/login');
-    }
-
-    public function dashboard()
+    /**
+     * Create a new controller instance.
+     */
+    public function __construct()
     {
         $this->middleware('auth');
+    }
 
+    public function index()
+    {
         return view('admin/dashboard');
     }
 
@@ -25,4 +26,23 @@ class AdminController extends Controller
         return view('admin/registry');
     }
     
+    public function siteSetting()
+    {
+        return view('admin/site_settings');
+    }
+
+    public function products()
+    {
+        return view('admin/product_edit');
+    }
+
+    public function profile()
+    {
+        return view('admin/profile_edit');
+    }
+
+    public function footer()
+    {
+        return view('admin/footer_edit');
+    }
 }

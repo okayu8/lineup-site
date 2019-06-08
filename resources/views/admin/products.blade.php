@@ -1,5 +1,5 @@
 @php
-    $title = __('Product Edit');
+    $title = __('Products');
 @endphp
 
 @extends('layouts.admin')

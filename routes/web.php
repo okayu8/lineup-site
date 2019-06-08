@@ -22,6 +22,6 @@ Route::get('/', 'HomeController@index');
 Route::get('/admin', 'Admin\AdminController@index');
 Route::get('/admin/registry', 'Admin\AdminController@registry');
 Route::get('/admin/site-settings', 'Admin\AdminController@siteSetting');
-Route::get('/admin/products', 'Admin\AdminController@products');
+Route::get('/admin/products', 'Admin\ProductController@index');
 Route::get('/admin/profile', 'Admin\AdminController@profile');
 Route::get('/admin/footer', 'Admin\AdminController@footer');

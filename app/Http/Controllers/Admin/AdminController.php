@@ -32,11 +32,6 @@ class AdminController extends Controller
         return view('admin/site_settings');
     }
 
-    public function products()
-    {
-        return view('admin/products');
-    }
-
     public function profile()
     {
         return view('admin/profile_edit');

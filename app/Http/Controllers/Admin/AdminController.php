@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
@@ -29,11 +30,6 @@ class AdminController extends Controller
     public function siteSetting()
     {
         return view('admin/site_settings');
-    }
-
-    public function products()
-    {
-        return view('admin/product_edit');
     }
 
     public function profile()

@@ -1,21 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Product;
 use App\User;
 use DB;
 use Illuminate\Support\Facades\Auth;
+use App\Services\ProductService;
 
 class ProductController extends Controller
 {
+    protected $productService;
+    public function __construct(ProductService $product_service)
+    {
+        $this->middleware('auth');
+        $this->productService = $product_service;
+    }
+
     //Productの一覧
     public function index()
     {
-        $products = DB::table('product');
+        $product = $this->productService->getAllProduct();
 
-        return response()->json($products);
+        return view('admin/products');
     }
 
     //Productの参照

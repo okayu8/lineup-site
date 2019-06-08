@@ -19,9 +19,9 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 
 //admin
-Route::get('/admin', 'AdminController@index');
-Route::get('/admin/registry', 'AdminController@registry');
-Route::get('/admin/site-settings', 'AdminController@siteSetting');
-Route::get('/admin/products', 'AdminController@products');
-Route::get('/admin/profile', 'AdminController@profile');
-Route::get('/admin/footer', 'AdminController@footer');
+Route::get('/admin', 'Admin\AdminController@index');
+Route::get('/admin/registry', 'Admin\AdminController@registry');
+Route::get('/admin/site-settings', 'Admin\AdminController@siteSetting');
+Route::get('/admin/products', 'Admin\AdminController@products');
+Route::get('/admin/profile', 'Admin\AdminController@profile');
+Route::get('/admin/footer', 'Admin\AdminController@footer');

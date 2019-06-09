@@ -19,12 +19,18 @@ class ProductController extends Controller
         $this->productService = $product_service;
     }
 
-    //Productの一覧
+    //Productのトップページを表示
     public function index()
     {
-        $product = $this->productService->getAllProduct();
+        $products = $this->productService->getAllProduct();
 
-        return view('admin/products');
+        return view('admin/products', $products);
+    }
+
+    //Product Createページの表示
+    public function create()
+    {
+        return view('admin/product_create');
     }
 
     //Productの参照
@@ -32,7 +38,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
-        return response()->json($todo);
+        return view('admin/product_edit', $product);
     }
 
     //Productの作成

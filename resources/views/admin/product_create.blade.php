@@ -18,52 +18,114 @@
                         <form method="POST" action="/admin/products/store">
                         {{ csrf_field() }}
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                    <input id="title" type="text" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title" value="{{ old('title') }}" required autofocus>
 
-                                    @if ($errors->has('name'))
+                                    @if ($errors->has('title'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('name') }}</strong>
+                                            <strong>{{ $errors->first('title') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                    <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ old('description') }}" required autofocus>
 
-                                    @if ($errors->has('email'))
+                                    @if ($errors->has('description'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('email') }}</strong>
+                                            <strong>{{ $errors->first('description') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                <label for="file_name" class="col-md-4 col-form-label text-md-right">{{ __('file_name') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name') ? ' is-invalid' : '' }}" name="file_name" value="{{ old('file_name') }}" required autofocus>
 
-                                    @if ($errors->has('password'))
+                                    @if ($errors->has('file_name'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('password') }}</strong>
+                                            <strong>{{ $errors->first('file_name') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                <label for="file_name2" class="col-md-4 col-form-label text-md-right">{{ __('file_name2') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name2') ? ' is-invalid' : '' }}" name="file_name2" value="{{ old('file_name2') }}" required autofocus>
+
+                                    @if ($errors->has('file_name2'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('file_name2') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="file_name3" class="col-md-4 col-form-label text-md-right">{{ __('file_name3') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="file_name3" type="text" class="form-control{{ $errors->has('file_name3') ? ' is-invalid' : '' }}" name="file_name3" value="{{ old('file_name2') }}" required autofocus>
+
+                                    @if ($errors->has('file_name3'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('file_name3') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('price') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="price" type="text" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ old('price') }}" required autofocus>
+
+                                    @if ($errors->has('price'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('price') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="product_url" class="col-md-4 col-form-label text-md-right">{{ __('product_url') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="product_url" type="text" class="form-control{{ $errors->has('product_url') ? ' is-invalid' : '' }}" name="product_url" value="{{ old('product_url') }}" required autofocus>
+
+                                    @if ($errors->has('product_url'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('product_url') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="category_id" class="col-md-4 col-form-label text-md-right">{{ __('category_id') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="category_id" type="text" class="form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" name="category_id" value="{{ old('category_id') }}" required autofocus>
+
+                                    @if ($errors->has('category_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('category_id') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
 

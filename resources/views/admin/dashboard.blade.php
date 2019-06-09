@@ -20,5 +20,4 @@
         <a href="admin/footer">Footer</a>
     </div>
 </div>
-
 @endsection

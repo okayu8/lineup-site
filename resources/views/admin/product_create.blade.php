@@ -15,7 +15,7 @@
                     <div class="card-header">{{ __('Create') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="/admin/products/store">
+                        <form method="POST" action="/admin/products">
                         {{ csrf_field() }}
                             <div class="form-group row">
                                 <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>

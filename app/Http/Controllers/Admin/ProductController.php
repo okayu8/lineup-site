@@ -77,7 +77,7 @@ class ProductController extends Controller
         $product->category_id = $request->category_id ? $request->category_id : null;
         $product->save();
 
-        return response()->json();
+        return redirect('/admin/products');
     }
 
     //Productの削除
@@ -86,6 +86,6 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->delete();
 
-        return response()->json();
+        return redirect('/admin/products');
     }
 }

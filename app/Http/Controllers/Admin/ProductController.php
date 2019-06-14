@@ -36,9 +36,7 @@ class ProductController extends Controller
     //Productの参照
     public function show(Request $request, $id)
     {
-        $product = Product::find($id);
-
-        return view('admin/product_edit', $product);
+        return view('admin/product_edit', ['product' => Product::findOrFail($id)]);
     }
 
     //Productの作成
@@ -77,7 +75,7 @@ class ProductController extends Controller
         $product->category_id = $request->category_id ? $request->category_id : null;
         $product->save();
 
-        return response()->json();
+        return redirect('/admin/products');
     }
 
     //Productの削除
@@ -86,6 +84,6 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->delete();
 
-        return response()->json();
+        return redirect('/admin/products');
     }
 }

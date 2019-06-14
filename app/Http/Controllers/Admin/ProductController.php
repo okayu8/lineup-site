@@ -36,7 +36,9 @@ class ProductController extends Controller
     //Productの参照
     public function show(Request $request, $id)
     {
-        return view('admin/product_edit', ['product' => Product::findOrFail($id)]);
+        $product = Product::findOrFail($id);
+
+        return view('admin/product_edit', ['product' => $product]);
     }
 
     //Productの作成

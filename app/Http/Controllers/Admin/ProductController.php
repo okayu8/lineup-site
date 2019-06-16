@@ -61,12 +61,21 @@ class ProductController extends Controller
         return redirect('/admin/products');
     }
 
+    //Productの参照
+    public function edit(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('admin/product_edit', ['product' => $product]);
+    }
+
     //Productの更新
     public function update(Request $request, $id)
     {
         $this->validate($request, [
             'title' => 'required|max:255',
         ]);
+        $product = new Product();
         $product->title = $request->title;
         $product->description = $request->description ? $request->description : "";
         $product->file_name = $request->file_name ? $request->file_name : "";

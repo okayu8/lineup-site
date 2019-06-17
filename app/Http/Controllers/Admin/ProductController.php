@@ -24,7 +24,7 @@ class ProductController extends Controller
     {
         $products = $this->productService->getAllProduct();
 
-        return view('admin/products', $products);
+        return view('admin/products', ['products' => $products]);
     }
 
     //Product Createページの表示

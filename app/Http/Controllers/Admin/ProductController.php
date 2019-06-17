@@ -75,7 +75,7 @@ class ProductController extends Controller
         $this->validate($request, [
             'title' => 'required|max:255',
         ]);
-        $product = new Product();
+        $product = Product::findOrFail($id);
         $product->title = $request->title;
         $product->description = $request->description ? $request->description : "";
         $product->file_name = $request->file_name ? $request->file_name : "";

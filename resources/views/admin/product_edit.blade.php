@@ -132,10 +132,11 @@
                                 </div>
                             </div>
                         </form>
-                        <form method="DELETE" action="/admin/products/{{$product->id}}">
+                        <form method="POST" action="/admin/products/{{$product->id}}">
+                            {{ csrf_field() }}
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" name="_method" value="DELETE">
                                         {{ __('Delete') }}
                                     </button>
                                 </div>

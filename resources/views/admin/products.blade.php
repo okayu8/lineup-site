@@ -7,7 +7,10 @@
 @section('content')
     <a class="dashboard-link" href="/admin">DdashBoard</a>
     <h1 class="admin-title">Products</h1>
-    <div class="row panel-1">
+    <div class="products-bar">
+        <button onclick="location.href='/admin/products/create'" class="btn btn-primary">Create</button>
+    </div>
+    <div class="row admin-panel-1">
             @foreach($products as $value)
                 <div class="col-md-6 panel-item">
                     <div class="panel-content">

@@ -24,7 +24,7 @@ class ProductController extends Controller
     {
         $products = $this->productService->getAllProduct();
 
-        return view('admin/products', $products);
+        return view('admin/products', ['products' => $products]);
     }
 
     //Product Createページの表示
@@ -36,7 +36,9 @@ class ProductController extends Controller
     //Productの参照
     public function show(Request $request, $id)
     {
-        return view('admin/product_edit', ['product' => Product::findOrFail($id)]);
+        $product = Product::findOrFail($id);
+
+        return view('admin/product_edit', ['product' => $product]);
     }
 
     //Productの作成
@@ -59,12 +61,21 @@ class ProductController extends Controller
         return redirect('/admin/products');
     }
 
+    //Productの参照
+    public function edit(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('admin/product_edit', ['product' => $product]);
+    }
+
     //Productの更新
     public function update(Request $request, $id)
     {
         $this->validate($request, [
             'title' => 'required|max:255',
         ]);
+        $product = Product::findOrFail($id);
         $product->title = $request->title;
         $product->description = $request->description ? $request->description : "";
         $product->file_name = $request->file_name ? $request->file_name : "";
@@ -81,7 +92,7 @@ class ProductController extends Controller
     //Productの削除
     public function destroy(Request $request, $id)
     {
-        $product = Product::find($id);
+        $product = Product::findOrFail($id);
         $product->delete();
 
         return redirect('/admin/products');

@@ -151,6 +151,12 @@ a:hover{
     margin: 20px;
 }
 
+.admin-panel-1{
+    margin: 10%;
+    margin-top: 40px;
+    text-align: center;
+}
+
 .admin-title{
     text-align: center;
 }
@@ -161,4 +167,11 @@ a:hover{
 
 .dashboard-item{
     text-align: center;
+}
+
+.products-bar{
+    margin: 10%;
+    margin-top:25px;
+    margin-bottom:25px;
+    text-align: right;
 }

@@ -35,7 +35,7 @@
                                 <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ old('description') }}" required autofocus>
+                                    <input id="description" type="text" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" name="description" value="{{ old('description') }}" autofocus>
 
                                     @if ($errors->has('description'))
                                         <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                                 <label for="file_name" class="col-md-4 col-form-label text-md-right">{{ __('file_name') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name') ? ' is-invalid' : '' }}" name="file_name" value="{{ old('file_name') }}" required autofocus>
+                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name') ? ' is-invalid' : '' }}" name="file_name" value="{{ old('file_name') }}" autofocus>
 
                                     @if ($errors->has('file_name'))
                                         <span class="invalid-feedback" role="alert">
@@ -63,7 +63,7 @@
                                 <label for="file_name2" class="col-md-4 col-form-label text-md-right">{{ __('file_name2') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name2') ? ' is-invalid' : '' }}" name="file_name2" value="{{ old('file_name2') }}" required autofocus>
+                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name2') ? ' is-invalid' : '' }}" name="file_name2" value="{{ old('file_name2') }}" autofocus>
 
                                     @if ($errors->has('file_name2'))
                                         <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                                 <label for="file_name3" class="col-md-4 col-form-label text-md-right">{{ __('file_name3') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="file_name3" type="text" class="form-control{{ $errors->has('file_name3') ? ' is-invalid' : '' }}" name="file_name3" value="{{ old('file_name2') }}" required autofocus>
+                                    <input id="file_name3" type="text" class="form-control{{ $errors->has('file_name3') ? ' is-invalid' : '' }}" name="file_name3" value="{{ old('file_name2') }}" autofocus>
 
                                     @if ($errors->has('file_name3'))
                                         <span class="invalid-feedback" role="alert">
@@ -91,7 +91,7 @@
                                 <label for="price" class="col-md-4 col-form-label text-md-right">{{ __('price') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="price" type="text" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ old('price') }}" required autofocus>
+                                    <input id="price" type="text" class="form-control{{ $errors->has('price') ? ' is-invalid' : '' }}" name="price" value="{{ old('price') }}" autofocus>
 
                                     @if ($errors->has('price'))
                                         <span class="invalid-feedback" role="alert">
@@ -100,12 +100,11 @@
                                     @endif
                                 </div>
                             </div>
-
                             <div class="form-group row">
                                 <label for="product_url" class="col-md-4 col-form-label text-md-right">{{ __('product_url') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="product_url" type="text" class="form-control{{ $errors->has('product_url') ? ' is-invalid' : '' }}" name="product_url" value="{{ old('product_url') }}" required autofocus>
+                                    <input id="product_url" type="text" class="form-control{{ $errors->has('product_url') ? ' is-invalid' : '' }}" name="product_url" value="{{ old('product_url') }}" autofocus>
 
                                     @if ($errors->has('product_url'))
                                         <span class="invalid-feedback" role="alert">

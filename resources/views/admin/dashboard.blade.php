@@ -8,7 +8,7 @@
 <h1 class="admin-title">DashBoard</h1>
 <div class="row dashboard-content">
     <div class="col-md-3 dashboard-item">
-        <a href="/admin/site-settings">Site Setting</a>
+        <a href="/admin/site-setting">Site Setting</a>
     </div>
     <div class="col-md-3 dashboard-item">
         <a href="/admin/products">Products</a>

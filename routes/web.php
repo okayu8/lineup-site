@@ -21,7 +21,7 @@ Route::get('/', 'HomeController@index');
 //admin
 Route::get('/admin', 'Admin\AdminController@index');
 Route::get('/admin/registry', 'Admin\AdminController@registry');
-Route::get('/admin/site-settings', 'Admin\AdminController@siteSetting');
+Route::resource('/admin/site-setting', 'Admin\SiteSettingController', ['only' => ['index', 'update']]);
 Route::resource('/admin/products', 'Admin\ProductController', ['only' => ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']]);
 Route::get('/admin/profile', 'Admin\AdminController@profile');
 Route::get('/admin/footer', 'Admin\AdminController@footer');

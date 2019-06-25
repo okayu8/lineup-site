@@ -14,7 +14,7 @@
                     <div class="card-header">{{ __('Create') }}</div>
 
                     <div class="card-body">
-                    <form method="POST" action="/admin/site-settong/{{$setting->id}}">
+                    <form method="POST" action="/admin/site-setting/{{$setting->id}}">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" value="PUT">
                             <div class="form-group row">

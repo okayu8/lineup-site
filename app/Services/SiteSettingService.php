@@ -6,7 +6,7 @@ class SiteSettingService{
     public function FirstSetting()
     {
         $setting = new Setting();
-        $setting->id = 0;
+        $setting->id = 1;
         $setting->site_title = "My Site";
         $setting->site_description = "";
         $setting->title_image1 = "";

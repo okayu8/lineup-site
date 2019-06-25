@@ -22,11 +22,12 @@ class SiteSettingController extends Controller
     //site settingを表示
     public function index()
     {
-        $setting = Setting::All();
-
-        if($setting == null){
+        if(Setting::find(1)){
+            $setting = Setting::findOrFail(1);
+        }
+        else{
             $this->siteSettingService->FirstSetting();
-            $setting = Setting::findOrFail(0);
+            $setting = Setting::find(1);
         }
         
         return view('admin/site_setting', ['setting' => $setting]);
@@ -47,6 +48,6 @@ class SiteSettingController extends Controller
         $setting->site_color = $request->site_color ? $request->site_color : "";
         $setting->save();
 
-        return redirect('/admin/site_setting');
+        return redirect('/admin');
     }
 }

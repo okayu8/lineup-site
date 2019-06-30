@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Create') }}</div>
+                    <div class="card-header">{{ __('Setting') }}</div>
 
                     <div class="card-body">
                     <form method="POST" action="/admin/site-setting/{{$setting->id}}">
@@ -34,7 +34,7 @@
                                 <label for="site_description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="site_description" type="text" class="form-control{{ $errors->has('site_description') ? ' is-invalid' : '' }}" name="site_description" value="{{ $setting->site_description }}" autofocus>
+                                    <textarea id="site_description" type="text" class="form-control{{ $errors->has('site_description') ? ' is-invalid' : '' }}" name="site_description" value="{{ $setting->site_description }}" autofocus>{{ $setting->site_description }}</textarea>
                                     @if ($errors->has('site_description'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('site_description') }}</strong>

@@ -24,5 +24,4 @@ Route::get('/admin/registry', 'Admin\AdminController@registry');
 Route::resource('/admin/site-setting', 'Admin\SiteSettingController', ['only' => ['index', 'update']]);
 Route::resource('/admin/products', 'Admin\ProductController', ['only' => ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']]);
 Route::resource('/admin/profile', 'Admin\ProfileController', ['only' => ['index', 'update']]);
-Route::resource('/admin/products', 'Admin\ProductController', ['only' => ['index', 'store', 'update', 'destroy']]);
-Route::get('/admin/footer', 'Admin\AdminController@footer');
+Route::resource('/admin/footer', 'Admin\FooterController', ['only' => ['index', 'store', 'update', 'destroy']]);

@@ -51,6 +51,16 @@
                                 </div>
                             </div>
                         </form>
+                        <form method="POST" action="/admin/footer/{{$item->id}}">
+                            {{ csrf_field() }}
+                            <div class="form-group row mb-0 form-delete-button">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-danger" name="_method" value="DELETE">
+                                        {{ __('Delete') }}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     @endforeach
                 </div>

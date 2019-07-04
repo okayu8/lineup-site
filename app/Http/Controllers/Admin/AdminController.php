@@ -19,7 +19,9 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin/dashboard');
+        $path = Storage::disk('s3')->url('hoge/1wRZQDtl4XnvYBgFRASZOXulRujAtbbHwIunofN1.jpeg');
+
+        return view('admin/dashboard', ['path' => $path]);
     }
 
     public function registry()
@@ -57,4 +59,5 @@ class AdminController extends Controller
         // $path = Storage::disk('s3')->putFileAs('/', $file, 'hoge.jpg', 'public');
         return redirect('/admin');
     }
+
 }

@@ -166,6 +166,17 @@ a:hover{
 }
 
 .dashboard-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-icon{
+    height: 80px;
+    width: 80px;
+}
+
+.dashboard-text{
     text-align: center;
 }
 

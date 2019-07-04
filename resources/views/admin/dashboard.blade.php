@@ -39,4 +39,5 @@ test
     <input type="file" name="file">
     <button type="submit">保存</button>
 </form>
+<img src="{{$path}}" style="width:200px; height:200px;">
 @endsection

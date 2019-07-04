@@ -25,3 +25,4 @@ Route::resource('/admin/site-setting', 'Admin\SiteSettingController', ['only' =>
 Route::resource('/admin/products', 'Admin\ProductController', ['only' => ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']]);
 Route::resource('/admin/profile', 'Admin\ProfileController', ['only' => ['index', 'update']]);
 Route::resource('/admin/footer', 'Admin\FooterController', ['only' => ['index', 'store', 'update', 'destroy']]);
+Route::post('/upload', 'Admin\AdminController@uploadTest');

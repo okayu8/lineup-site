@@ -58,12 +58,10 @@
                                 <label for="title_image2" class="col-md-4 col-form-label text-md-right">{{ __('Image2') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="title_image2" type="text" class="form-control{{ $errors->has('title_image2') ? ' is-invalid' : '' }}" name="title_image2" value="{{ $setting->title_image2 }}" autofocus>
-                                    @if ($errors->has('title_image2'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('title_image2') }}</strong>
-                                        </span>
+                                    @if ($image2)
+                                        <img src="{{$image2}}" alt="" style="width:100px; height:100px;">
                                     @endif
+                                    <input type="file" name="title_image2">
                                 </div>
                             </div>
 
@@ -71,13 +69,10 @@
                                 <label for="title_image3" class="col-md-4 col-form-label text-md-right">{{ __('Image3') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="title_image3" type="text" class="form-control{{ $errors->has('title_image3') ? ' is-invalid' : '' }}" name="title_image3" value="{{ $setting->title_image3 }}" autofocus>
-
-                                    @if ($errors->has('title_image3'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('title_image3') }}</strong>
-                                        </span>
+                                    @if ($image3)
+                                        <img src="{{$image3}}" alt="" style="width:100px; height:100px;">
                                     @endif
+                                    <input type="file" name="title_image3">
                                 </div>
                             </div>
 

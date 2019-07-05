@@ -20,6 +20,11 @@
     <body>
         
         <div class="admin-content">
+            <div align="right">
+                <a href="/">
+                    <img class="home-icon" src="/images/icon/普通の家のアイコン.svg">
+                </a>
+            </div>
             @yield('content')
         </div>
         

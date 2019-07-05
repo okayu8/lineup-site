@@ -6,6 +6,7 @@
 
 @section('content')
     <a class="dashboard-link" href="/admin">DdashBoard</a>
+    <span> > </span>
     <a class="dashboard-link" href="/admin/products">Products</a>
     <h1 class="admin-title">Product Create</h1>
     <div class="container">

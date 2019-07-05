@@ -161,6 +161,11 @@ a:hover{
     text-align: center;
 }
 
+.home-icon{
+    height: 30px;
+    width: 30px;
+}
+
 .dashboard-content{
     margin: 40px;
 }

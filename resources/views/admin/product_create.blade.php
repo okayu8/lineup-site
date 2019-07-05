@@ -49,7 +49,14 @@
                                 <label for="product_image1" class="col-md-4 col-form-label text-md-right">{{ __('Image1') }}</label>
 
                                 <div class="col-md-6">
-                                    <input type="file" name="product_image1">
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn btn-primary">
+                                                Choose File<input type="file" name="product_image1"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
@@ -57,7 +64,14 @@
                                 <label for="product_image2" class="col-md-4 col-form-label text-md-right">{{ __('Image2') }}</label>
 
                                 <div class="col-md-6">
-                                    <input type="file" name="product_image2">
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn btn-primary">
+                                                Choose File<input type="file" name="product_image2"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
@@ -65,7 +79,14 @@
                                 <label for="product_image3" class="col-md-4 col-form-label text-md-right">{{ __('Image3') }}</label>
 
                                 <div class="col-md-6">
-                                    <input type="file" name="product_image3">
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn btn-primary">
+                                                Choose File<input type="file" name="product_image3"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 

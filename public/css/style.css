@@ -191,6 +191,11 @@ a:hover{
     margin-top: 20px;
 }
 
+.form-image{
+    width: 80%; 
+    margin-bottom: 20px;
+}
+
 .container-sub{
     margin-top: 40px;
 }

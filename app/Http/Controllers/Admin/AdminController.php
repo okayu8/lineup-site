@@ -53,6 +53,7 @@ class AdminController extends Controller
         // 第二引数はファイル
         // 第三引数はpublicを指定することで、URLによるアクセスが可能となる
         $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
+        
         // hogeディレクトリにアップロード
         // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
         // ファイル名を指定する場合はputFileAsを利用する

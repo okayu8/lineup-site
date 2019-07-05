@@ -201,6 +201,11 @@ a:hover{
     margin-bottom: 20px;
 }
 
+.form-update-button{
+    background-color: rgba(89, 91, 102);
+    color: #FFFFFF;
+}
+
 .container-sub{
     margin-top: 40px;
 }

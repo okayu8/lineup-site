@@ -49,9 +49,16 @@
 
                                 <div class="col-md-6">
                                     @if($image1)
-                                        <img src="{{$image1}}" alt="" style="width:100px; height:100px;">
+                                        <img src="{{$image1}}" alt="" class="form-image">
                                     @endif
-                                    <input type="file" name="product_image1">
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn btn-primary">
+                                                Choose File<input type="file" name="product_image1"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
@@ -60,9 +67,16 @@
 
                                 <div class="col-md-6">
                                     @if($image2)
-                                        <img src="{{$image2}}" alt="" style="width:100px; height:100px;">
+                                        <img src="{{$image2}}" alt="" class="form-image">
                                     @endif
-                                    <input type="file" name="product_image2">
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn btn-primary">
+                                                Choose File<input type="file" name="product_image2"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
@@ -71,9 +85,16 @@
 
                                 <div class="col-md-6">
                                     @if($image3)
-                                        <img src="{{$image3}}" alt="" style="width:100px; height:100px;">
+                                        <img src="{{$image3}}" alt="" class="form-image">
                                     @endif
-                                    <input type="file" name="product_image3">
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn btn-primary">
+                                                Choose File<input type="file" name="product_image3"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 

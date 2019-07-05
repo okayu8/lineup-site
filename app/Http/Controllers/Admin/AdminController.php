@@ -19,9 +19,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        $path = Storage::disk('s3')->url('hoge/1wRZQDtl4XnvYBgFRASZOXulRujAtbbHwIunofN1.jpeg');
-
-        return view('admin/dashboard', ['path' => $path]);
+        return view('admin/dashboard');
     }
 
     public function registry()
@@ -44,21 +42,6 @@ class AdminController extends Controller
     public function footer()
     {
         return view('admin/footer_edit');
-    }
-
-    public function uploadTest(Request $request)
-    {
-        $file = $request->file('file');
-        // 第一引数はディレクトリの指定
-        // 第二引数はファイル
-        // 第三引数はpublicを指定することで、URLによるアクセスが可能となる
-        $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
-        
-        // hogeディレクトリにアップロード
-        // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
-        // ファイル名を指定する場合はputFileAsを利用する
-        // $path = Storage::disk('s3')->putFileAs('/', $file, 'hoge.jpg', 'public');
-        return redirect('/admin');
     }
 
 }

@@ -15,7 +15,7 @@
                     <div class="card-header">{{ __('Edit') }}</div>
 
                     <div class="card-body">
-                    <form method="POST" action="/admin/products/{{$product->id}}">
+                    <form method="POST" action="/admin/products/{{$product->id}}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" value="PUT">
                             <div class="form-group row">
@@ -70,8 +70,8 @@
                                 <label for="product_image3" class="col-md-4 col-form-label text-md-right">{{ __('Image3') }}</label>
 
                                 <div class="col-md-6">
-                                    @if($image2)
-                                        <img src="{{$image2}}" alt="" style="width:100px; height:100px;">
+                                    @if($image3)
+                                        <img src="{{$image3}}" alt="" style="width:100px; height:100px;">
                                     @endif
                                     <input type="file" name="product_image3">
                                 </div>

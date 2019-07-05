@@ -32,12 +32,4 @@
         </a>
     </div>
 </div>
-
-test
-<form action="/upload" method="post" enctype="multipart/form-data">
-    {{ csrf_field() }}
-    <input type="file" name="file">
-    <button type="submit">保存</button>
-</form>
-<img src="{{$path}}" style="width:200px; height:200px;">
 @endsection

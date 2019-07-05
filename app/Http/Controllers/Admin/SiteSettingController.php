@@ -45,31 +45,28 @@ class SiteSettingController extends Controller
             'site_title' => 'required|max:255',
         ]);
 
-        $path1 = "";
-        $path2 = "";
-        $path3 = "";
-        
+        $setting = Setting::findOrFail($id);
+
         if($request->file('title_image1')){
             $file1 = $request->file('title_image1');
             $path1 = Storage::disk('s3')->putFile('/SiteSetting', $file1, 'public');
+            $setting->title_image1 = $path1;
         }
 
         if($request->file('title_image2')){
             $file2 = $request->file('title_image2');
             $path2 = Storage::disk('s3')->putFile('/SiteSetting', $file2, 'public');
+            $setting->title_image2 = $path2;
         }
 
         if($request->file('title_image3')){
             $file3 = $request->file('title_image3');
             $path3 = Storage::disk('s3')->putFile('/SiteSetting', $file3, 'public');
+            $setting->title_image3 = $path3;
         }
 
-        $setting = Setting::findOrFail($id);
         $setting->site_title = $request->site_title;
         $setting->site_description = $request->site_description ? $request->site_description : "";
-        $setting->title_image1 = $path1 ? $path1 : "";
-        $setting->title_image2 = $path2 ? $path2 : "";
-        $setting->title_image3 = $path3 ? $path3 : "";
         $setting->site_color = $request->site_color ? $request->site_color : "";
         $setting->save();
 

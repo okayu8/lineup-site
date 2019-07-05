@@ -161,11 +161,27 @@ a:hover{
     text-align: center;
 }
 
+.home-icon{
+    height: 30px;
+    width: 30px;
+}
+
 .dashboard-content{
     margin: 40px;
 }
 
 .dashboard-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-icon{
+    height: 80px;
+    width: 80px;
+}
+
+.dashboard-text{
     text-align: center;
 }
 
@@ -178,4 +194,18 @@ a:hover{
 
 .form-delete-button{
     margin-top: 20px;
+}
+
+.form-image{
+    width: 80%; 
+    margin-bottom: 20px;
+}
+
+.form-update-button{
+    background-color: rgba(89, 91, 102);
+    color: #FFFFFF;
+}
+
+.container-sub{
+    margin-top: 40px;
 }

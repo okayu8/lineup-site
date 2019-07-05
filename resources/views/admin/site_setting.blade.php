@@ -14,7 +14,7 @@
                     <div class="card-header">{{ __('Setting') }}</div>
 
                     <div class="card-body">
-                    <form method="POST" action="/admin/site-setting/{{$setting->id}}">
+                    <form method="POST" action="/admin/site-setting/{{$setting->id}}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" value="PUT">
                             <div class="form-group row">
@@ -47,12 +47,17 @@
                                 <label for="title_image1" class="col-md-4 col-form-label text-md-right">{{ __('Image1') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="title_image1" type="text" class="form-control{{ $errors->has('title_image1') ? ' is-invalid' : '' }}" name="title_image1" value="{{ $setting->title_image1 }}" autofocus>
-                                    @if ($errors->has('title_image1'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('title_image1') }}</strong>
-                                        </span>
+                                    @if($image1)
+                                        <img src="{{$image1}}" alt="" class="form-image">
                                     @endif
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn form-update-button">
+                                                Choose File<input type="file" name="title_image1"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
@@ -60,12 +65,17 @@
                                 <label for="title_image2" class="col-md-4 col-form-label text-md-right">{{ __('Image2') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="title_image2" type="text" class="form-control{{ $errors->has('title_image2') ? ' is-invalid' : '' }}" name="title_image2" value="{{ $setting->title_image2 }}" autofocus>
-                                    @if ($errors->has('title_image2'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('title_image2') }}</strong>
-                                        </span>
+                                    @if ($image2)
+                                        <img src="{{$image2}}" alt="" class="form-image">
                                     @endif
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn form-update-button">
+                                                Choose File<input type="file" name="title_image2"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
@@ -73,13 +83,17 @@
                                 <label for="title_image3" class="col-md-4 col-form-label text-md-right">{{ __('Image3') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="title_image3" type="text" class="form-control{{ $errors->has('title_image3') ? ' is-invalid' : '' }}" name="title_image3" value="{{ $setting->title_image3 }}" autofocus>
-
-                                    @if ($errors->has('title_image3'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('title_image3') }}</strong>
-                                        </span>
+                                    @if ($image3)
+                                        <img src="{{$image3}}" alt="" class="form-image">
                                     @endif
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn form-update-button">
+                                                Choose File<input type="file" name="title_image3"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 

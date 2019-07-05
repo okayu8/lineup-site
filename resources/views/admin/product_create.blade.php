@@ -6,6 +6,7 @@
 
 @section('content')
     <a class="dashboard-link" href="/admin">DdashBoard</a>
+    <span> > </span>
     <a class="dashboard-link" href="/admin/products">Products</a>
     <h1 class="admin-title">Product Create</h1>
     <div class="container">
@@ -15,7 +16,7 @@
                     <div class="card-header">{{ __('Create') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="/admin/products">
+                        <form method="POST" action="/admin/products" enctype="multipart/form-data">
                         {{ csrf_field() }}
                             <div class="form-group row">
                                 <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
@@ -46,44 +47,47 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="file_name" class="col-md-4 col-form-label text-md-right">{{ __('file_name') }}</label>
+                                <label for="product_image1" class="col-md-4 col-form-label text-md-right">{{ __('Image1') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name') ? ' is-invalid' : '' }}" name="file_name" value="{{ old('file_name') }}" autofocus>
-
-                                    @if ($errors->has('file_name'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('file_name') }}</strong>
-                                        </span>
-                                    @endif
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn form-update-button">
+                                                Choose File<input type="file" name="product_image1"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="file_name2" class="col-md-4 col-form-label text-md-right">{{ __('file_name2') }}</label>
+                                <label for="product_image2" class="col-md-4 col-form-label text-md-right">{{ __('Image2') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="file_name" type="text" class="form-control{{ $errors->has('file_name2') ? ' is-invalid' : '' }}" name="file_name2" value="{{ old('file_name2') }}" autofocus>
-
-                                    @if ($errors->has('file_name2'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('file_name2') }}</strong>
-                                        </span>
-                                    @endif
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn form-update-button">
+                                                Choose File<input type="file" name="product_image2"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="file_name3" class="col-md-4 col-form-label text-md-right">{{ __('file_name3') }}</label>
+                                <label for="product_image3" class="col-md-4 col-form-label text-md-right">{{ __('Image3') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="file_name3" type="text" class="form-control{{ $errors->has('file_name3') ? ' is-invalid' : '' }}" name="file_name3" value="{{ old('file_name2') }}" autofocus>
-
-                                    @if ($errors->has('file_name3'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('file_name3') }}</strong>
-                                        </span>
-                                    @endif
+                                    <div class="input-group">
+                                        <label class="input-group-btn">
+                                            <span class="btn form-update-button">
+                                                Choose File<input type="file" name="product_image3"  style="display:none">
+                                            </span>
+                                        </label>
+                                        <input type="text" class="form-control" readonly="">
+                                    </div>
                                 </div>
                             </div>
 

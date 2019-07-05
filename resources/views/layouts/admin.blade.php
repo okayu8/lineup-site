@@ -20,6 +20,11 @@
     <body>
         
         <div class="admin-content">
+            <div align="right">
+                <a href="/">
+                    <img class="home-icon" src="/images/icon/普通の家のアイコン.svg">
+                </a>
+            </div>
             @yield('content')
         </div>
         
@@ -31,6 +36,13 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        
+        <script>
+        $(document).on('change', ':file', function() {
+            var input = $(this),
+            numFiles = input.get(0).files ? input.get(0).files.length : 1,
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.parent().parent().next(':text').val(label);
+        });
+        </script>
     </body>
 </html>

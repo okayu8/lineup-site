@@ -54,7 +54,7 @@
                                     @endif
                                     <div class="input-group">
                                         <label class="input-group-btn">
-                                            <span class="btn btn-primary">
+                                            <span class="btn form-update-button">
                                                 Choose File<input type="file" name="product_image1"  style="display:none">
                                             </span>
                                         </label>
@@ -72,7 +72,7 @@
                                     @endif
                                     <div class="input-group">
                                         <label class="input-group-btn">
-                                            <span class="btn btn-primary">
+                                            <span class="btn form-update-button">
                                                 Choose File<input type="file" name="product_image2"  style="display:none">
                                             </span>
                                         </label>
@@ -90,7 +90,7 @@
                                     @endif
                                     <div class="input-group">
                                         <label class="input-group-btn">
-                                            <span class="btn btn-primary">
+                                            <span class="btn form-update-button">
                                                 Choose File<input type="file" name="product_image3"  style="display:none">
                                             </span>
                                         </label>

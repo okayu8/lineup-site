@@ -1,5 +1,5 @@
 @php
-    $title = __('Line up');
+    $title = $site_title;
 @endphp
 @extends('layouts.app')
 
@@ -11,15 +11,23 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src={{$slide_img[0]}} alt="First slide">
-                </div>
-                <div class="carousel-item">
+                @for($titleImgI = 0; $titleImgI < count($slide_img); $titleImgI++)
+                    @if($titleImgI === 0)
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src={{$slide_img[$titleImgI]}} alt="First slide">
+                        </div>
+                    @else
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src={{$slide_img[$titleImgI]}} alt="Second slide">
+                        </div>
+                    @endif
+                {{-- <div class="carousel-item">
                     <img class="d-block w-100" src={{$slide_img[1]}} alt="Second slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src={{$slide_img[2]}} alt="Third slide">
-                </div>
+                </div> --}}
+                @endfor
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -30,7 +38,7 @@
                 <span class="sr-only">Next</span>
             </a>
                 <div class="title">
-                    W.spring
+                    {{$site_title}}
                 </div>
         </div>
         

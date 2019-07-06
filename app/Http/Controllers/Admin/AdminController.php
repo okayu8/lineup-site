@@ -24,24 +24,6 @@ class AdminController extends Controller
 
     public function registry()
     {
-        // $this->middleware('auth');
-
         return view('admin/registry');
     }
-    
-    public function siteSetting()
-    {
-        return view('admin/site_settings');
-    }
-
-    public function profile()
-    {
-        return view('admin/profile_edit');
-    }
-
-    public function footer()
-    {
-        return view('admin/footer_edit');
-    }
-
 }

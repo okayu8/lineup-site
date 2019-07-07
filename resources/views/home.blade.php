@@ -63,9 +63,9 @@
     </div>
     <footer>
         <div class="footer">
-            <a href="#" class="footer-item">Footer</a>
-            <a href="#" class="footer-item">Footer</a>
-            <a href="#" class="footer-item">Footer</a>
+            @foreach($footer as $footerItem)
+                <a href={{$footerItem->url}} class="footer-item" target="_blank">{{$footerItem->display_name}}</a>
+            @endforeach
         </div>
     </footer>
 @endsection

@@ -147,6 +147,20 @@ a:hover{
     text-decoration:none;
 }
 
+/* footer style */
+.footer{
+    background-color: rgb(61, 61, 61);
+    text-align: center;
+    word-wrap: break-word;
+    padding: 50px;
+}
+
+.footer-item{
+    font-size: 20px;
+    color:rgba(204, 204, 204, 0.671);
+    padding: 20px;
+}
+
 /* product page style */
 .product-disp{
     margin: 10%;

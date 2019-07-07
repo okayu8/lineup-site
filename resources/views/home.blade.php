@@ -49,7 +49,9 @@
                         <div class="col-md-6 panel-item">
                             <div class="panel-content">
                                 <a class="product-link" href="#">
-                                    <img class="product-img-1" src={{$value['img']}}/>
+                                    @if($value['img'] != '')
+                                        <img class="product-img-1" src={{$value['img']}} class="panel-img">
+                                    @endif
                                     <p class="product-title-1">{{$value['title']}}</p>
                                     <p class="product-desc-1">{{$value['desc']}}</p>
                                 </a>

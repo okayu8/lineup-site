@@ -107,6 +107,7 @@ a:hover{
     margin: 10%;
     margin-top: 80px;
     text-align: center;
+
 }
 
 .panel-item{
@@ -137,6 +138,7 @@ a:hover{
 }
 
 .product-img-1{
+    max-height: 240px;
     width: 100%;
     border-radius: 12px 12px 0px 0px;
 }

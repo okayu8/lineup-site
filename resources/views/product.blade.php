@@ -49,4 +49,11 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="footer">
+            @foreach($footer as $footerItem)
+                <a href={{$footerItem->url}} class="footer-item" target="_blank">{{$footerItem->display_name}}</a>
+            @endforeach
+        </div>
+    </footer>
 @endsection

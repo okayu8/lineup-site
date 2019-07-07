@@ -5,11 +5,13 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Setting;
 use App\Product;
+use App\Footer;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        //サイト情報の取得
         $setting = Setting::findOrFail(1);
 
         $site_title = $setting->site_title;
@@ -22,6 +24,7 @@ class HomeController extends Controller
         // $setting->title_image2 && array_push($slide_img, Storage::disk('s3')->url($setting->title_image2));
         // $setting->title_image3 && array_push($slide_img, Storage::disk('s3')->url($setting->title_image3));
 
+        //商品情報の取得
         $products = Product::all();
         $lineup_array = array();
         foreach($products as $item){
@@ -47,6 +50,10 @@ class HomeController extends Controller
         //         'title'=>'test4', 
         //         'desc'=>'テスト2という商品です。'),
         //     );
-        return view('home', compact('site_title', 'slide_img', 'lineup_array'));
+
+        //footer情報の取得
+        $footer = Footer::all();
+
+        return view('home', compact('site_title', 'slide_img', 'lineup_array', 'footer'));
     }
 }

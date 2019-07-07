@@ -61,4 +61,11 @@
             
         </div>
     </div>
+    <footer>
+        <div class="footer">
+            <a href="#" class="footer-item">Footer</a>
+            <a href="#" class="footer-item">Footer</a>
+            <a href="#" class="footer-item">Footer</a>
+        </div>
+    </footer>
 @endsection

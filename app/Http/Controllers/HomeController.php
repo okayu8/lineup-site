@@ -25,9 +25,10 @@ class HomeController extends Controller
         $products = Product::all();
         $lineup_array = array();
         foreach($products as $item){
-            array_push($lineup_array, array('title'=>$item->title, 'img'=>Storage::disk('s3')->url($item->file_name), 'desc'=>$item->descreption));
+            array_push($lineup_array, array('id'=>$item->id, 'title'=>$item->title, 'img'=>Storage::disk('s3')->url($item->file_name), 'desc'=>$item->description));
         }
 
+        //TODO:test code
         // $lineup_array = array(
         //     'test1' => array(
         //         'img'=>'/images/DSC00247.jpg', 

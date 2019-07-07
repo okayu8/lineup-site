@@ -147,6 +147,59 @@ a:hover{
     text-decoration:none;
 }
 
+/* product page style */
+.product-disp{
+    margin: 10%;
+}
+
+.productdisp-title-area{
+    padding: 20px;
+}
+
+.productdisp-title{
+    color: rgba(255, 129, 11, 0.993);
+    font-size: 4.5rem;
+    word-wrap: break-word
+}
+
+.productdisp-slider-area{
+
+}
+
+.productdisp-content{
+    margin-top: 20px;
+}
+
+.productdisp-price-area{
+    text-align: right;
+}
+
+.price-label{
+    font-size: 25px;
+    margin: 0px;
+}
+
+.productdisp-price{
+    font-size: 50px;
+    color: rgb(255, 43, 131)
+}
+
+.productdisp-desc-area{
+    border: 0.5rem outset rgb(94, 94, 94);
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    background-color: #FFFFFF;
+    padding: 1rem;
+}
+
+.desc-label{
+    font-size: 25px;
+}
+
+.productdisp-desc{
+
+}
+
 /* admin pages style */
 
 .admin-content{

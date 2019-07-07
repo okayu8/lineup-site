@@ -17,6 +17,7 @@
 
 Auth::routes();
 Route::get('/', 'HomeController@index');
+Route::get('/product/{id}', 'ProductDispController@show');
 
 //admin
 Route::get('/admin', 'Admin\AdminController@index');

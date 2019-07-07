@@ -53,31 +53,28 @@ class ProductController extends Controller
             'title' => 'required|max:255'
         ]);
 
-        $path1 = "";
-        $path2 = "";
-        $path3 = "";
+        $product = new Product();
         
         if($request->file('product_image1')){
             $file1 = $request->file('product_image1');
             $path1 = Storage::disk('s3')->putFile('/Product', $file1, 'public');
+            $product->file_name = $path1;
         }
 
         if($request->file('product_image2')){
             $file2 = $request->file('product_image2');
             $path2 = Storage::disk('s3')->putFile('/Product', $file2, 'public');
+            $product->file_name2 = $path2;
         }
 
         if($request->file('product_image3')){
             $file3 = $request->file('product_image3');
             $path3 = Storage::disk('s3')->putFile('/Product', $file3, 'public');
+            $product->file_name3 = $path3;
         }
 
-        $product = new Product();
         $product->title = $request->title;
         $product->description = $request->description ? $request->description : "";
-        $product->file_name = $path1 ? $path1 : "";
-        $product->file_name2 = $path2 ? $path2 : "";
-        $product->file_name3 = $path3 ? $path3 : "";
         $product->price = $request->price ? $request->price : null;
         $product->product_url = $request->product_url ? $request->product_url : "";
         $product->category_id = $request->category_id ? $request->category_id : null;
@@ -105,31 +102,28 @@ class ProductController extends Controller
             'title' => 'required|max:255',
         ]);
 
-        $path1 = "";
-        $path2 = "";
-        $path3 = "";
-        
+        $product = Product::findOrFail($id);
+
         if($request->file('product_image1')){
             $file1 = $request->file('product_image1');
             $path1 = Storage::disk('s3')->putFile('/Product', $file1, 'public');
+            $product->file_name = $path1;
         }
 
         if($request->file('product_image2')){
             $file2 = $request->file('product_image2');
             $path2 = Storage::disk('s3')->putFile('/Product', $file2, 'public');
+            $product->file_name2 = $path2;
         }
 
         if($request->file('product_image3')){
             $file3 = $request->file('product_image3');
             $path3 = Storage::disk('s3')->putFile('/Product', $file3, 'public');
+            $product->file_name3 = $path3;
         }
 
-        $product = Product::findOrFail($id);
         $product->title = $request->title;
         $product->description = $request->description ? $request->description : "";
-        $product->file_name = $path1 ? $path1 : "";
-        $product->file_name2 = $path2 ? $path2 : "";
-        $product->file_name3 = $path3 ? $path3 : "";
         $product->price = $request->price ? $request->price : null;
         $product->product_url = $request->product_url ? $request->product_url : "";
         $product->category_id = $request->category_id ? $request->category_id : null;

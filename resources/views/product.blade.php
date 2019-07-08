@@ -38,7 +38,7 @@
             <div class="productdisp-price-area">
                 <label class="price-label">Price</label>
                 <p class="productdisp-price">
-                    {{$product->price}}
+                    ¥ {{number_format($product->price)}}
                 </p>
             </div>
             <div class="productdisp-desc-area">

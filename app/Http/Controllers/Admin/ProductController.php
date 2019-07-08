@@ -104,6 +104,7 @@ class ProductController extends Controller
 
         $product = Product::findOrFail($id);
 
+        //TODO:画像が変更された場合、元の画像を削除する処理を追加
         if($request->file('product_image1')){
             $file1 = $request->file('product_image1');
             $path1 = Storage::disk('s3')->putFile('/Product', $file1, 'public');
@@ -123,13 +124,52 @@ class ProductController extends Controller
         }
 
         $product->title = $request->title;
-        $product->description = $request->description ? $request->description : "";
+        $product->description = $request->description ? $request->description : '';
         $product->price = $request->price ? $request->price : null;
-        $product->product_url = $request->product_url ? $request->product_url : "";
+        $product->product_url = $request->product_url ? $request->product_url : '';
         $product->category_id = $request->category_id ? $request->category_id : null;
         $product->save();
 
         return redirect('/admin/products');
+    }
+
+    //画像１の削除
+    public function deleteImg1(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $product->file_name = '';
+        $product->save();
+
+        return redirect("/admin/products/{$id}/edit");
+    }
+
+    //画像2の削除
+    public function deleteImg2(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $product->file_name2 = '';
+        $product->save();
+
+        return redirect("/admin/products/{$id}/edit");
+    }
+
+    //画像3の削除
+    public function deleteImg3(Request $request, $id)
+    {
+        $product = Product::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $product->file_name3 = '';
+        $product->save();
+
+        return redirect("/admin/products/{$id}/edit");
     }
 
     //Productの削除

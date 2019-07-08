@@ -24,5 +24,8 @@ Route::get('/admin', 'Admin\AdminController@index');
 Route::get('/admin/registry', 'Admin\AdminController@registry');
 Route::resource('/admin/site-setting', 'Admin\SiteSettingController', ['only' => ['index', 'update']]);
 Route::resource('/admin/products', 'Admin\ProductController', ['only' => ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']]);
+Route::put('/admin/products/deleteimg1/{id}', 'Admin\ProductController@deleteImg1');
+Route::put('/admin/products/deleteimg2/{id}', 'Admin\ProductController@deleteImg2');
+Route::put('/admin/products/deleteimg3/{id}', 'Admin\ProductController@deleteImg3');
 Route::resource('/admin/profile', 'Admin\ProfileController', ['only' => ['index', 'update']]);
 Route::resource('/admin/footer', 'Admin\FooterController', ['only' => ['index', 'store', 'update', 'destroy']]);

@@ -72,4 +72,43 @@ class SiteSettingController extends Controller
 
         return redirect('/admin');
     }
+
+    //画像１の削除
+    public function deleteImg1(Request $request, $id)
+    {
+        $setting = Setting::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $setting->title_image1 = '';
+        $setting->save();
+
+        return redirect('/admin/site-setting');
+    }
+
+    //画像2の削除
+    public function deleteImg2(Request $request, $id)
+    {
+        $setting = Setting::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $setting->title_image2 = '';
+        $setting->save();
+
+        return redirect('/admin/site-setting');
+    }
+
+    //画像3の削除
+    public function deleteImg3(Request $request, $id)
+    {
+        $setting = Setting::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $setting->title_image3 = '';
+        $setting->save();
+
+        return redirect('/admin/site-setting');
+    }
 }

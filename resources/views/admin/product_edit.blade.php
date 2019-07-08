@@ -79,7 +79,7 @@
                                                 Choose File<input type="file" name="product_image2"  style="display:none">
                                             </span>
                                         </label>
-                                        <input type="text" class="form-control" readonly="">
+                                        <input type="text" class="form-control" readonly="" value={{$image2}}>
                                     </div>
                                     @if($image2)
                                         <input type="submit" class="btn btn-danger" form="img-delete2" value="Delete Image">
@@ -100,7 +100,7 @@
                                                 Choose File<input type="file" name="product_image3"  style="display:none">
                                             </span>
                                         </label>
-                                        <input type="text" class="form-control" readonly="">
+                                        <input type="text" class="form-control" readonly="" value={{$image3}}>
                                     </div>
                                     @if($image3)
                                         <input type="submit" class="btn btn-danger" form="img-delete3" value="Delete Image">

@@ -107,6 +107,7 @@ a:hover{
     margin: 10%;
     margin-top: 80px;
     text-align: center;
+
 }
 
 .panel-item{
@@ -145,6 +146,72 @@ a:hover{
     text-decoration:none;
 }
 
+/* footer style */
+.footer{
+    background-color: rgb(61, 61, 61);
+    text-align: center;
+    word-wrap: break-word;
+    padding: 50px;
+}
+
+.footer-item{
+    display:inline-block;
+    font-size: 20px;
+    color:rgba(204, 204, 204, 0.671);
+    margin: 10px 20px;
+}
+
+/* product page style */
+.product-disp{
+    margin: 10%;
+}
+
+.productdisp-title-area{
+    padding: 20px;
+}
+
+.productdisp-title{
+    color: rgba(255, 129, 11, 0.993);
+    font-size: 3.5rem;
+    word-wrap: break-word;
+}
+
+.productdisp-content{
+    margin-top: 20px;
+}
+
+.productdisp-price-area{
+    text-align: right;
+}
+
+.price-label{
+    font-size: 25px;
+    margin: 0px;
+}
+
+.productdisp-price{
+    font-size: 50px;
+    color: rgb(255, 43, 131);
+    word-wrap: break-word;
+}
+
+.productdisp-desc-area{
+    border: 0.5rem outset rgb(94, 94, 94);
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    word-wrap: break-word;
+}
+
+.desc-label{
+    font-size: 30px;;
+}
+
+.productdisp-desc{
+    font-size: 24px;
+}
+
 /* admin pages style */
 
 .admin-content{
@@ -174,6 +241,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 25px;
 }
 
 .dashboard-icon{

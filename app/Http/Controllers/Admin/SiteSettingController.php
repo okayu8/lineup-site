@@ -45,34 +45,70 @@ class SiteSettingController extends Controller
             'site_title' => 'required|max:255',
         ]);
 
-        $path1 = "";
-        $path2 = "";
-        $path3 = "";
-        
+        $setting = Setting::findOrFail($id);
+
         if($request->file('title_image1')){
             $file1 = $request->file('title_image1');
             $path1 = Storage::disk('s3')->putFile('/SiteSetting', $file1, 'public');
+            $setting->title_image1 = $path1;
         }
 
         if($request->file('title_image2')){
             $file2 = $request->file('title_image2');
             $path2 = Storage::disk('s3')->putFile('/SiteSetting', $file2, 'public');
+            $setting->title_image2 = $path2;
         }
 
         if($request->file('title_image3')){
             $file3 = $request->file('title_image3');
             $path3 = Storage::disk('s3')->putFile('/SiteSetting', $file3, 'public');
+            $setting->title_image3 = $path3;
         }
 
-        $setting = Setting::findOrFail($id);
         $setting->site_title = $request->site_title;
         $setting->site_description = $request->site_description ? $request->site_description : "";
-        $setting->title_image1 = $path1 ? $path1 : "";
-        $setting->title_image2 = $path2 ? $path2 : "";
-        $setting->title_image3 = $path3 ? $path3 : "";
         $setting->site_color = $request->site_color ? $request->site_color : "";
         $setting->save();
 
         return redirect('/admin');
+    }
+
+    //画像１の削除
+    public function deleteImg1(Request $request, $id)
+    {
+        $setting = Setting::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $setting->title_image1 = '';
+        $setting->save();
+
+        return redirect('/admin/site-setting');
+    }
+
+    //画像2の削除
+    public function deleteImg2(Request $request, $id)
+    {
+        $setting = Setting::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $setting->title_image2 = '';
+        $setting->save();
+
+        return redirect('/admin/site-setting');
+    }
+
+    //画像3の削除
+    public function deleteImg3(Request $request, $id)
+    {
+        $setting = Setting::findOrFail($id);
+        
+        //TODO: S3から画像を削除する処理を追加
+
+        $setting->title_image3 = '';
+        $setting->save();
+
+        return redirect('/admin/site-setting');
     }
 }

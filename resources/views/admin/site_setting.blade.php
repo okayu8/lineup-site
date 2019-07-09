@@ -56,8 +56,11 @@
                                                 Choose File<input type="file" name="title_image1"  style="display:none">
                                             </span>
                                         </label>
-                                        <input type="text" class="form-control" readonly="">
+                                        <input type="text" class="form-control" readonly="" value={{$image1}}>
                                     </div>
+                                    @if($image1)
+                                        <input type="submit" class="btn btn-danger" form="img-delete1" value="Delete Image">
+                                    @endif
                                 </div>
                             </div>
 
@@ -74,8 +77,11 @@
                                                 Choose File<input type="file" name="title_image2"  style="display:none">
                                             </span>
                                         </label>
-                                        <input type="text" class="form-control" readonly="">
+                                        <input type="text" class="form-control" readonly="" value={{$image2}}>
                                     </div>
+                                    @if($image2)
+                                        <input type="submit" class="btn btn-danger" form="img-delete2" value="Delete Image">
+                                    @endif
                                 </div>
                             </div>
 
@@ -92,8 +98,11 @@
                                                 Choose File<input type="file" name="title_image3"  style="display:none">
                                             </span>
                                         </label>
-                                        <input type="text" class="form-control" readonly="">
+                                        <input type="text" class="form-control" readonly="" value={{$image3}}>
                                     </div>
+                                    @if($image3)
+                                        <input type="submit" class="btn btn-danger" form="img-delete3" value="Delete Image">
+                                    @endif
                                 </div>
                             </div>
 
@@ -117,6 +126,18 @@
                                     </button>
                                 </div>
                             </div>
+                        </form>
+                        <form id="img-delete1" method="POST" action="/admin/site-setting/deleteimg1/{{$setting->id}}">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
+                        </form>
+                        <form id="img-delete2" method="POST" action="/admin/site-setting/deleteimg2/{{$setting->id}}">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
+                        </form>
+                        <form id="img-delete3" method="POST" action="/admin/site-setting/deleteimg3/{{$setting->id}}">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
                         </form>
                     </div>
                 </div>

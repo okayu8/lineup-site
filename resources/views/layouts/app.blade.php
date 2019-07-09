@@ -19,20 +19,13 @@
     <body>
         <div class="navbar navbar-expand-sm fixed-top navbar--extend navbar-right navbar-color">
             <div class="nav-item nav-link nav-item--extend active">
-                <a class="nav-link--extend" href="#lineup">Line up</a>
+                <a class="nav-link--extend" href="/#lineup">Line up</a>
             </div>
             <div class="nav-item nav-item--extend nav-link" >
                 <a class="nav-link--extend" href="#">Profile</a>
             </div>
         </div>
-
         @yield('content')
-        
-        <footer>
-            <div class="footer">
-                <p>Footer</p>
-            </div>
-        </footer>
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>

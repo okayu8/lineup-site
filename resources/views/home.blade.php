@@ -50,7 +50,9 @@
                         <div class="panel-content">
                             <a class="product-link" href="/product/{{$value['id']}}">
                                 @if($value['img'] != '')
-                                    <img class="product-img-1" src={{$value['img']}} class="panel-img">
+                                    <div class="panel-img">
+                                        <img class="product-img-1" src={{$value['img']}} class="panel-img">
+                                    </div>
                                 @endif
                                 <p class="product-title-1">{{$value['title']}}</p>
                                 <p class="product-desc-1">{{$value['desc']}}</p>

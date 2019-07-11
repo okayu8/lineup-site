@@ -22,7 +22,7 @@
                 <a class="nav-link--extend" href="/#lineup">Line up</a>
             </div>
             <div class="nav-item nav-item--extend nav-link" >
-                <a class="nav-link--extend" href="#">Profile</a>
+                <a class="nav-link--extend" href="/profile">Profile</a>
             </div>
         </div>
         @yield('content')

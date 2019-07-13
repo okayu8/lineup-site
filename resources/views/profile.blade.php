@@ -9,6 +9,9 @@
             {{$site_title}}
         </a>
     </div>
+    <div class="productdisp-title-area">
+            <h1 class="productdisp-title">Profile</h1>
+        </div>
     <footer>
         <div class="footer">
             @foreach($footer as $footerItem)

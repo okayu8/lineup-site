@@ -168,8 +168,19 @@ a:hover{
 }
 
 /* product page style */
+.site-title{
+    margin: 20px;
+}
+
+.top-link{
+    font-size: 3vw;
+    color: rgb(124, 124, 124);
+    font-weight: bold;
+}
+
 .product-disp{
     margin: 10%;
+    margin-top: 20px;
 }
 
 .productdisp-title-area{

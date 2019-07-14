@@ -4,6 +4,11 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="site-title">
+        <a class="top-link" href="/">
+            {{$site_title}}
+        </a>
+    </div>
     <div class="product-disp">
         <div class="productdisp-title-area">
             <h1 class="productdisp-title">{{$product->title}}</h1>
